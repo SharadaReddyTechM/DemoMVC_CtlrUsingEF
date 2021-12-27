@@ -1,0 +1,27 @@
+﻿@model IEnumerable<DemoMVC_CtlrUsingEF.Models.tblemployee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    @{ 
+        var username = Session["usrname"].ToString();
+    }
+    <h3>Welcome @username</h3>
+</p>
+@section login1{
+    @Html.ActionLink("Logout","Logout","Account")
+    }
+
+
+@foreach (var item in Model)
+{
+    //Html.RenderPartial("empPV",item);
+    @Html.Partial("empPV",item)
+}
+
+

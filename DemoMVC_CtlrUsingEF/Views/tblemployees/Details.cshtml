@@ -1,0 +1,78 @@
+﻿@model DemoMVC_CtlrUsingEF.Models.tblemployee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblemployee</h4>
+    <hr />
+    @{ 
+        Html.RenderPartial("empPV", Model);
+    }
+    @Html.Partial("empPV",Model)
+    @*<dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.empname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empdob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empdob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empmobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empmobile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empdept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empdept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empgender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empgender)
+        </dd>
+
+    </dl>*@
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.empid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

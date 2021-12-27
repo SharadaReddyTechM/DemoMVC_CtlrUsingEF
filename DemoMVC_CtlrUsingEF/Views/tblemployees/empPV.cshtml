@@ -1,0 +1,50 @@
+﻿@model DemoMVC_CtlrUsingEF.Models.tblemployee
+<table class="table" border="1" style="border-color:green;border-style:solid">
+    <tr>
+        <td> @Html.DisplayNameFor(model => model.empid)</td>
+        <td> @Html.DisplayFor(model => model.empid)</td>
+        <td rowspan="8">
+            @*@Html.DisplayFor(model => item.empPic)*@
+            @{
+                var imppath = @"~/EmpPics/" + Model.empPic + ".png";
+            }
+            @* <img src="~/EmpPics/emp1.png" alt="Alternate Text" />*@
+            @*<img src=@item.empPic alt="Alternate Text" />*@
+            <img src="@Url.Content(imppath)" style="height:200px;width:200px" alt="Alternate Text" />
+        </td>
+    </tr>
+    <tr>
+        <td> @Html.DisplayNameFor(model => model.empname)</td>
+        <td> @Html.DisplayFor(model => model.empname)</td>
+    </tr>
+    <tr>
+        <td> @Html.DisplayNameFor(model => model.empdob)</td>
+        <td> @Html.DisplayFor(model => model.empdob)</td>
+    </tr>
+    <tr>
+        <td> @Html.DisplayNameFor(model => model.empage)</td>
+        <td> @Html.DisplayFor(model => model.empage)</td>
+    </tr>
+    <tr>
+        <td> @Html.DisplayNameFor(model => model.empmobile)</td>
+        <td> @Html.DisplayFor(model => model.empmobile)</td>
+    </tr>
+    <tr>
+        <td> @Html.DisplayNameFor(model => model.empdept)</td>
+        <td> @Html.DisplayFor(model => model.empdept)</td>
+    </tr>
+    <tr>
+        <td> @Html.DisplayNameFor(model => model.salary)</td>
+        <td> @Html.DisplayFor(model => model.salary)</td>
+    </tr>
+    <tr>
+        <td> @Html.DisplayNameFor(model => model.empgender)</td>
+        <td> @Html.DisplayFor(model => model.empgender)</td>
+    </tr>
+    <tr>
+        <td colspan="3" style="text-align:center">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.empid }) |@Html.ActionLink("Details", "Details", new { id = Model.empid }) |
+            @Html.ActionLink("Delete", "Delete", new { id = Model.empid })
+        </td>
+    </tr>
+</table>
